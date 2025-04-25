@@ -1,0 +1,23 @@
+Perfect! Since you’re working as a team, here’s the fastest and cleanest way to stay synced:
+
+✅ To pull the latest changes from GitHub into IntelliJ:
+
+Just click VCS (top menu) ➔ Git ➔ Pull...
+
+OR shortcut:
+
+Ctrl + T (Windows/Linux)
+
+Cmd + T (Mac)
+
+👉 This will fetch and merge the latest changes your teammates pushed.
+
+✅ Workflow you should all follow:
+
+Pull first (Ctrl + T) ➔ to make sure you have the latest version.
+
+Make your edits.
+
+Commit and Push (Ctrl + K) ➔ to send your changes.
+
+Golden rule: ➔ Always pull before starting and pull again before pushing! (to avoid conflicts)
