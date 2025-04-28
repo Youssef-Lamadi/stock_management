@@ -1,6 +1,7 @@
 package com.project.stock_management.config;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -11,7 +12,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class DispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	// Logger
-	private Logger LOGGER = Logger.getLogger(getClass().getName());
+	private Logger LOGGER = LogManager.getLogger(getClass().getName());
 
 	public DispatcherServletInitializer() {
 		LOGGER.debug("Création de DispatcherServletInitializer.........");

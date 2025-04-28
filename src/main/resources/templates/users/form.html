@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${userForm.id == null} ? 'Create User' : 'Edit User'"></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1 th:text="${userForm.id == null} ? 'Create User' : 'Edit User'"></h1>
+<form th:action="${userForm.id == null} ? @{/users/new} : @{/users/edit}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <div>
+        <label>Username:</label>
+        <input type="text" th:field="*{username}" required />
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" th:field="*{password}" />
+        <small th:if="${userForm.id != null}">(Leave blank to keep current password)</small>
+    </div>
+    <div>
+        <label>Roles:</label>
+        <select th:field="*{roleNames}" multiple>
+            <option th:each="role : ${allRoles}"
+                    th:value="${role}"
+                    th:text="${role}"
+                    th:selected="${#lists.contains(userForm.roleNames, role)}"></option>
+        </select>
+    </div>
+    <button type="submit">Save</button>
+    <a th:href="@{/users}">Cancel</a>
+</form>
+</body>
+</html>
